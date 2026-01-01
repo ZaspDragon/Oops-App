@@ -1,0 +1,18 @@
+CREATE TABLE IF NOT EXISTS users (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT NOT NULL UNIQUE
+);
+
+CREATE TABLE IF NOT EXISTS entries (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  ts TEXT NOT NULL,
+  work_date TEXT NOT NULL,
+  hour INTEGER NOT NULL,
+  user_name TEXT NOT NULL,
+  department TEXT NOT NULL,
+  action TEXT NOT NULL,
+  item_no TEXT,
+  quantity INTEGER NOT NULL DEFAULT 1,
+  location TEXT,
+  notes TEXT
+);

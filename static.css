@@ -1,0 +1,54 @@
+:root{
+  --bg:#F5F8FF;
+  --card:#FFFFFF;
+  --border:#D2DCF5;
+  --blue:#1A5CCC;
+  --blue2:#1044A8;
+  --text:#141923;
+  --muted:#5A6478;
+  --pill:#E8F0FF;
+  --input:#FAFCFF;
+}
+*{box-sizing:border-box}
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  margin:0; background:var(--bg); color:var(--text);
+}
+.wrap{ max-width: 1100px; margin:0 auto; padding:18px;}
+.topbar{
+  background:#fff; border-bottom:2px solid var(--border);
+  padding:14px 18px; display:flex; justify-content:space-between; align-items:center; gap:12px;
+}
+.brand{font-weight:800; color:var(--blue); letter-spacing:.2px}
+.title{font-weight:700}
+.subtle{color:var(--muted); font-size:14px}
+.nav{ padding:14px 0 6px 0; display:flex; flex-wrap:wrap; gap:10px;}
+.nav a{
+  text-decoration:none; color:var(--text);
+  padding:8px 12px; border-radius:999px;
+  border:1px solid var(--border); background:#fff;
+}
+.nav a.active{ border:2px solid var(--blue); background:var(--pill); color:var(--blue2); font-weight:700;}
+.card{
+  background:var(--card); border:2px solid var(--border);
+  border-radius:18px; padding:16px; margin-top:12px;
+}
+h2,h3{margin:0 0 8px 0}
+label{display:block; font-size:13px; color:var(--muted); margin-top:10px}
+input,select{
+  width:100%; padding:10px 12px; border-radius:14px;
+  border:2px solid var(--border); background:var(--input); font-size:14px;
+}
+.row{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+.row3{display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;}
+@media (max-width: 820px){ .row,.row3{grid-template-columns:1fr;} }
+button{
+  border:2px solid var(--blue); background:var(--blue); color:#fff;
+  padding:10px 14px; border-radius:14px; font-weight:800; cursor:pointer;
+}
+button.secondary{ background:#fff; color:var(--blue); }
+.pill{ display:inline-block; padding:6px 10px; border-radius:999px; background:var(--pill); color:var(--blue2); font-weight:700; font-size:13px;}
+table{ width:100%; border-collapse:collapse; margin-top:10px;}
+th,td{ text-align:left; padding:10px 8px; border-bottom:1px solid #EDF2FF; font-size:13px;}
+.status-good{ color:#128C46; font-weight:900;}
+.status-bad{ color:#B42828; font-weight:900;}
